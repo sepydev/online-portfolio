@@ -1,0 +1,24 @@
+{% extends 'authenticate-base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="w-lg-600px bg-body rounded shadow-sm p-10 p-lg-15 mx-auto">
+        <form class="form w-100" novalidate="novalidate" id="kt_sign_up_form" method="Post">
+            {% csrf_token %}
+            <div class="mb-10 text-center">
+                <h1 class="text-dark mb-3">ساختن اکانت</h1>
+                <div class="text-gray-400 fw-bold fs-4">اکانت کاربری دارید؟
+                    <a href="{% url 'accounts:login' %}"
+                       class="link-primary fw-bolder">ورود</a></div>
+            </div>
+            {{ form.as_p }}
+            <div class="text-center">
+                <input type="submit" class="btn btn-lg btn-primary" value="ثبت"/>
+            </div>
+        </form>
+    </div>
+
+
+
+{% endblock %}
