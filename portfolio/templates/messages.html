@@ -1,0 +1,5 @@
+{% if messages %}
+    {% for message in messages %}
+        <p class="badge badge-light-{{ message.tags }} fs-7 fw-bolder" >{{ message }}</p>
+    {% endfor %}
+{% endif %}
