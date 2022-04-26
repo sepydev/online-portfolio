@@ -4,7 +4,7 @@ from django.views import View
 
 class AdminPanel(View):
     def get(self, request):
-        if request.user.is_authenticated:
+        if request.user.is_authenticated and hasattr(request.user, 'profile'):
             profile = request.user.profile
         else:
             profile = None
@@ -13,7 +13,7 @@ class AdminPanel(View):
 
 class Home(View):
     def get(self, request):
-        if request.user.is_authenticated:
+        if request.user.is_authenticated and hasattr(request.user, 'profile'):
             profile = request.user.profile
         else:
             profile = None
