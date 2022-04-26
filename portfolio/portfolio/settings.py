@@ -137,6 +137,8 @@ STATICFILES_DIRS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+SITE_ID = 1
+
 # AUTH_USER_MODEL = 'accounts.User'
 from accounts.settings import *
 
